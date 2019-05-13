@@ -20,6 +20,8 @@ INCLUDE 'EMU8086.INC'
         ;LOADING DATA VARIALBLES
         MOV AX, @DATA
         MOV DS, AX
+        
+        ;MAX LIMIT 8!
 
         ;PRINT PROMPT
         MOV AH, 9
@@ -57,8 +59,13 @@ INCLUDE 'EMU8086.INC'
         MOV DL, 0DH
         INT 21H    
         
+        
+        ;Comment Out Code Segment In Asterisks
+        ;To remove the HEX output
+        ;*****
         ;PRINTING RESULT
         CALL PRINT_PRODUCT
+        ;*****
 
         PRINTN
 
